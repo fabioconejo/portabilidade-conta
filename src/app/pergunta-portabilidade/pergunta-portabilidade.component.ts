@@ -14,11 +14,11 @@ declare var $;
 export class PerguntaPortabilidadeComponent implements OnInit {
   private _numPergunta:number = 1
 
-  private valorTranferencia:number;
-  private apenasDados:boolean = false;
-  private nomeBanco:string;
-  private motivoTag:string;
-  private motivoDetalhado:string;
+  valorTranferencia:number;
+  apenasDados:boolean = false;
+  nomeBanco:string;
+  motivoTag:string;
+  motivoDetalhado:string;
 
   bancos = [
     "ITAÚ UNIBANCO S.A.", 

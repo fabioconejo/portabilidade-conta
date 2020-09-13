@@ -9,6 +9,10 @@ import { PortabilidadeExportacaoComponent } from './portabilidade-exportacao/por
 import { PerguntaPortabilidadeComponent } from './pergunta-portabilidade/pergunta-portabilidade.component';
 import { ResumoPortabilidadeComponent } from './resumo-portabilidade/resumo-portabilidade.component';
 import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
+import { AberturaContaComponent } from './abertura-conta/abertura-conta.component';
+import { NavegacaoComponent } from './navegacao/navegacao.component';
+import { ConfuguracaoComponent } from './confuguracao/confuguracao.component';
 
 
 @NgModule({
@@ -18,6 +22,10 @@ import { LoginComponent } from './login/login.component';
     PerguntaPortabilidadeComponent,
     ResumoPortabilidadeComponent,
     LoginComponent,
+    HomeComponent,
+    AberturaContaComponent,
+    NavegacaoComponent,
+    ConfuguracaoComponent,
   ],
   imports: [
     BrowserModule,

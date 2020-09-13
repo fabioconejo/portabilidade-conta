@@ -10,12 +10,12 @@ declare var $;
   styleUrls: ['./resumo-portabilidade.component.css']
 })
 export class ResumoPortabilidadeComponent implements OnInit {
-  private chavePortabilidade:string = "SGFja2FTYWZyYSAyMDIw";
-  private nomeCliente:string;
-  private cpfCliente:string;
-  private valorTranferencia:number;
-  private apenasDados:boolean = false;
-  private nomeBanco:string;
+  chavePortabilidade:string = "SGFja2FTYWZyYSAyMDIw";
+  nomeCliente:string;
+  cpfCliente:string;
+  valorTranferencia:number;
+  apenasDados:boolean = false;
+  nomeBanco:string;
 
   constructor() { 
     this.nomeCliente = ClienteService.nomeCliente;
