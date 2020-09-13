@@ -1,0 +1,93 @@
+<div class="perguntas" id="pergunta-1">
+    <p class='texto-pergunta'>O que é a portabilidade de conta?</p>
+
+    <div class='componente-pergunta'>
+        <p class='texto-pergunta-1'>
+            Nós do Banco Safra valorizamos a sua liberdade
+            de escolher qual instituição você quer estar e por isso
+            desenvolvemos a portabilidade de conta digital que tem como 
+            objetivo facilitar a criação de contas em outros bancos/fintechs.
+        </p>
+    </div>
+
+    <div class="navegacao-portabilidade">
+        <p class="anterior-portabilidade" style="visibility: hidden;"><button (click)="anterior()">Anterior</button></p>
+        <p class="proximo-portabilidade"><button (click)="proximo()">Próximo</button></p>
+    </div>
+</div>
+
+<div class="perguntas" id="pergunta-2">
+    <p class='texto-pergunta'>Quanto você deseja transferir?</p>
+
+    <div class='componente-pergunta'>
+        <div class="ui fluid input">
+            <input type="number" placeholder="R$0,00" [(ngModel)]='valorTranferencia'>
+        </div>
+
+        <div class="ui checkbox escolha-pergunta-2">
+            <input type="checkbox" name="apenas-dados" [(ngModel)]='apenasDados'>
+            <label>Desejo apenas realizar a portabilidade dos meus dados pessoais</label>
+          </div>
+    </div>
+
+    <div class="navegacao-portabilidade">
+        <p class="anterior-portabilidade"><button (click)="anterior()">Anterior</button></p>
+        <p class="proximo-portabilidade"><button (click)="proximo()">Próximo</button></p>
+    </div>
+</div>
+
+<div class="perguntas" id="pergunta-3">
+    <p class='texto-pergunta'>Qual instituição você escolheu?</p>
+
+    <div class='componente-pergunta'>
+        <div class="ui fluid selection dropdown">
+            <input type="hidden" name="banco" [(ngModel)]='nomeBanco'>
+            <i class="dropdown icon"></i>
+            <div class="default text">Escolha uma instituição...</div>
+            <div class="menu">
+                <div class="item" *ngFor="let banco of bancos">{{banco}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navegacao-portabilidade">
+        <p class="anterior-portabilidade"><button (click)="anterior()">Anterior</button></p>
+        <p class="proximo-portabilidade"><button (click)="proximo()">Próximo</button></p>
+    </div>
+</div>
+
+<div class="perguntas" id="pergunta-4">
+    <p class='texto-pergunta'>O que te fez a tomar essa decisão?</p>
+
+    <div class='componente-pergunta'>
+        <div class="ui fluid selection dropdown">
+            <input type="hidden" name="motivo" [(ngModel)]='motivoTag'>
+            <i class="dropdown icon"></i>
+            <div class="default text">Escolha o motivo...</div>
+            <div class="menu">
+                <div class="item" *ngFor="let motivo of motivos">{{motivo}}</div>
+            </div>
+        </div>
+        <div class="ui form">
+            <div class="field">
+                <textarea rows="4" placeholder="Explique mais... (opcional)" [(ngModel)]='motivoDetalhado'></textarea>
+            </div>
+        </div>
+    </div>
+
+    <div class="navegacao-portabilidade">
+        <p class="anterior-portabilidade"><button (click)="anterior()">Anterior</button></p>
+        <p class="proximo-portabilidade"><button (click)="exibirConfirmacao()">Finalizar</button></p>
+    </div>
+
+    <div class="ui mini modal">
+        <div class="header">Tem certeza que irá realizar a portabilidade?</div>
+        <div class="content">
+            <p>Ao clicar em ACEITO, você concorda em disponibilizar suas informações bancárias para o banco escolhido.</p>
+        </div>
+        <div class="actions">
+            <div class="ui cancel button">Discordo</div>
+            <a routerLink="/portabilidade/resumo"><div class="ui approve button" (click)='finalizar()'>Aceito</div></a>
+        </div>
+      </div>
+</div>

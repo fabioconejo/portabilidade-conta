@@ -1,0 +1,20 @@
+<div class="resumo">
+    <p class='texto-resumo'>Chave para abertura de conta</p>
+
+    <div class='componente-pergunta'>
+        <div class="ui fluid disabled action input">
+            <input type="text" [(ngModel)]='chavePortabilidade' #chave>
+
+            <button class="ui teal right icon button" (click)="copyInputMessage(chave)">
+                <i class="copy icon"></i>
+            </button>
+        </div>
+        <p class='texto-resumo'>Resumo</p>
+        <ol class="ui list">
+            <li value="*">Nome do Cliente: {{nomeCliente}}</li>
+            <li value="*">CNPJ do Cliente: {{cpfCliente}}</li>
+            <li value="*">Instituição de Destino: {{nomeBanco}}</li>
+            <li value="*">Valor a Transferir: {{valorTranferencia}}</li>
+        </ol>
+    </div>
+</div>

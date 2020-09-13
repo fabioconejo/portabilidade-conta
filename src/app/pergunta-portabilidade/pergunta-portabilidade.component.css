@@ -1,0 +1,93 @@
+:host {
+    width: 82%;
+    height: 50%;
+    margin-top: 5%;
+    margin-left: 9%;
+    display: block;
+}
+
+.texto-pergunta {
+    width: 100%;
+    height: 10%;
+    margin-top: 15%;
+    text-align: center;
+    font-size: 20px;
+}
+
+.navegacao-portabilidade {
+    width: 100%;
+    height: 10%;
+    margin-top: 5%;
+}
+
+.anterior-portabilidade {
+    width: 50%;
+    height: 100%;
+    float: left;
+    text-align: left;
+}
+
+.proximo-portabilidade {
+    width: 50%;
+    height: 100%;
+    float: left;
+    text-align: right;
+}
+
+.componente-pergunta {
+    width: 100%;
+    height: 70%;
+    margin-top: 5%;
+}
+
+.texto-pergunta-1 {
+    font-size: 16px;
+    text-align: justify;
+}
+
+.perguntas {
+    width: 100%;
+    height: 70%;
+    display: none;
+    
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.ui.input>input {
+    border: none;
+    border-bottom: solid 1px #DDDDDD;
+    padding: 0.3em 0.2em;
+    font-family: 'Roboto';
+}
+
+.escolha-pergunta-2.ui.checkbox label {
+    color: #151E45;
+}
+
+.escolha-pergunta-2 {
+    margin-top: 5%;
+}
+
+.ui.selection.dropdown {
+    padding: 0.4em 0.2em;
+    min-height: 0;
+    border: none;
+    border-bottom: solid 1px #DDDDDD;
+}
+
+.ui.selection.dropdown>.delete.icon, .ui.selection.dropdown>.dropdown.icon, .ui.selection.dropdown>.search.icon {
+    padding: 0.3em 0.2em;
+}
+
+.ui.form textarea {
+    margin-top: 5%;
+    padding: 0.3em 0.2em;
+}
