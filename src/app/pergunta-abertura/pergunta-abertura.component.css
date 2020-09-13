@@ -70,3 +70,7 @@ button {
 .ui.form {
     margin-top: 15%;
 }
+
+button:disabled {
+    opacity: 0.5;
+}

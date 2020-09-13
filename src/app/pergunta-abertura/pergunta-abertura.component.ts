@@ -8,9 +8,18 @@ declare var $;
   styleUrls: ['./pergunta-abertura.component.css']
 })
 export class PerguntaAberturaComponent implements OnInit {
-  private _numPergunta:number = 1
-  
-  constructor() { }
+  private _numPergunta:number = 1;
+  chavePortabilidade:string;
+  codigoEmail:string;
+  senha:string;
+  confirmSenha:string;
+
+  constructor() { 
+    this.chavePortabilidade = '';
+    this.codigoEmail = '';
+    this.senha = '';
+    this.confirmSenha = '';
+  }
 
   ngOnInit(): void {
     $('.ui.dropdown').dropdown();
@@ -22,7 +31,7 @@ export class PerguntaAberturaComponent implements OnInit {
   }
 
   anterior() {
-    $('#pergunta-' + this._numPergunta).transition({
+    $('#pergunta-abertura-' + this._numPergunta).transition({
       animation:'fade',
       duration:0
     });
@@ -48,10 +57,22 @@ export class PerguntaAberturaComponent implements OnInit {
   }
 
   exibirConfirmacao() {
-    $('.ui.mini.modal').modal('show');
+    $('.modal-seguranca').modal('show');
   }
 
   concluir() {
     console.log();
+  }
+
+  validarChave():boolean {
+    return this.chavePortabilidade == '';
+  }
+
+  validarCodigo():boolean {
+    return this.codigoEmail == '';
+  }
+
+  validarSenha():boolean {
+    return this.senha == '' || this.senha != this.confirmSenha;
   }
 }

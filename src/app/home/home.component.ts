@@ -17,7 +17,6 @@ export class HomeComponent implements OnInit {
 
   ngAfterViewInit() {
     $('.ui.embed').embed();
-    $('.ui.mini.modal').modal('show');
   }
 
 }

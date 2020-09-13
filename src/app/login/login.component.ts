@@ -10,7 +10,11 @@ export class LoginComponent implements OnInit {
   conta:string;
   senha:string;
   
-  constructor() { }
+  constructor() { 
+    this.agencia = '';
+    this.conta = ''; 
+    this.senha = '';
+  }
 
   ngOnInit(): void {
   }

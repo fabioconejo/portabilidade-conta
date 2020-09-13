@@ -21,26 +21,26 @@
 
     <div class='componente-pergunta-abertura'>
         <div class="ui fluid input">
-            <input type="text" placeholder="">
+            <input type="text" placeholder="" [(ngModel)]="chavePortabilidade">
         </div>
     </div>
 
     <div class="navegacao-portabilidade">
         <p class="anterior-portabilidade"><button (click)="anterior()">Anterior</button></p>
-        <p class="proximo-portabilidade"><button (click)="exibirConfirmacao()">Próximo</button></p>
+        <p class="proximo-portabilidade"><button [disabled]="validarChave()" (click)="exibirConfirmacao()">Próximo</button></p>
     </div>
 
-    <div class="ui mini modal">
+    <div class="ui mini modal modal-seguranca" >
         <div class="header">Checagem de Segurança</div>
             <div class="content">
                 <p>Foi enviado um código de verificação no seu e-mail, degite-o abaixo para prosseguirmos.</p>
                 
                 <div class="ui fluid input">
-                    <input type="text" placeholder="">
+                    <input type="text" placeholder="" [(ngModel)]="codigoEmail">
                 </div>
             </div>
         <div class="actions">
-            <div class="ui approve button" (click)='proximo()'>Validar</div>
+            <button class="ui approve button" (click)='proximo()' [disabled]="validarCodigo()">Validar</button>
         </div>
     </div>
 </div>
@@ -87,20 +87,20 @@
 </div>
 
 <div class="perguntas-abertura" id="pergunta-abertura-4">
-    <p class='texto-pergunta-abertura'>Cadastre sua senha</p>
+    <p class='texto-pergunta-abertura'>Para finalizar, cadastre sua senha</p>
 
     <div class='componente-pergunta-abertura'>
         <div class="ui fluid input">
-            <input type="password" placeholder="Senha">
+            <input type="password" placeholder="Senha" [(ngModel)]="senha">
         </div>
         <br>
         <div class="ui fluid input">
-            <input type="password" placeholder="Confirmar Senha">
+            <input type="password" placeholder="Confirmar Senha" [(ngModel)]="confirmSenha">
         </div>
     </div>
 
     <div class="navegacao-portabilidade">
         <p class="anterior-portabilidade"><button (click)="anterior()">Anterior</button></p>
-        <a routerLink="/home/primeira-vez"><p class="proximo-portabilidade"><button (click)="concluir()">Concluir</button></p></a>
+        <p class="proximo-portabilidade"><button [routerLink]="['/home/primeira-vez']" [disabled]="validarSenha()" (click)="concluir()">Concluir</button></p>
     </div>
 </div>
