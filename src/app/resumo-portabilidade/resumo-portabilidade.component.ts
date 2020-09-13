@@ -7,27 +7,28 @@ declare var $;
 @Component({
   selector: 'app-resumo-portabilidade',
   templateUrl: './resumo-portabilidade.component.html',
+  providers: [ClienteService],
   styleUrls: ['./resumo-portabilidade.component.css']
 })
 export class ResumoPortabilidadeComponent implements OnInit {
-  chavePortabilidade:string = "SGFja2FTYWZyYSAyMDIw";
+  token:string = "SGFja2FTYWZyYSAyMDIw";
   nomeCliente:string;
   cpfCliente:string;
   valorTranferencia:number;
   apenasDados:boolean = false;
   nomeBanco:string;
 
-  constructor() { 
+  constructor(private _clienteService: ClienteService) { 
+    
+  }
+
+  ngOnInit(): void {
     this.nomeCliente = ClienteService.nomeCliente;
     this.cpfCliente = ClienteService.cpfCliente;
     this.valorTranferencia = ClienteService.valorTranferencia;
     this.apenasDados = ClienteService.apenasDados;
     this.nomeBanco = ClienteService.nomeBanco;
-    this.chavePortabilidade = ClienteService.chavePortabilidade;
-  }
-
-  ngOnInit(): void {
-      
+    this.token = this._clienteService.generateToken();
   }
 
   copyInputMessage(inputElement){

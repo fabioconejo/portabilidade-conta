@@ -3,7 +3,7 @@
 
     <div class='componente-pergunta'>
         <div class="ui fluid action input">
-            <input type="text" [readonly]="true" [(ngModel)]='chavePortabilidade' #chave>
+            <input [(ngModel)]='token' type="text" [readonly]="true" #chave>
 
             <button class="ui teal right icon button" (click)="copyInputMessage(chave)">
                 <i class="copy icon"></i>
