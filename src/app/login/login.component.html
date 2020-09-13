@@ -3,27 +3,27 @@
 <div class="login-area">
     <div class="login-agencia">
         <div class="ui fluid input">
-            <input type="text" placeholder="Agência">
+            <input type="text" placeholder="Agência" [(ngModel)]="agencia">
         </div>
     </div>
     
     <div class="login-conta">
         <div class="ui fluid input">
-            <input type="text" placeholder="Conta">
+            <input type="text" placeholder="Conta" [(ngModel)]="conta">
         </div>
     </div>
 
     <div class="login-senha">
         <div class="ui fluid input">
-            <input type="password" placeholder="Senha">
+            <input type="password" placeholder="Senha" [(ngModel)]="senha">
         </div>
     </div>
 
     <div class="login-button">
-        <a routerLink="/home"><button class="ui fluid blue button">Login</button></a>
+        <button [disabled]="validarCampos()" [routerLink]="['/home']" class="ui fluid blue button">Login</button>
     </div>
 
     <div class="login-button">
-        <a routerLink="/abertura-conta"><button class="ui fluid facebook button">Abrir conta</button></a>
+        <button [routerLink]="['/abertura-conta']" class="ui fluid facebook button">Abrir conta</button>
     </div>
 </div>
