@@ -2,8 +2,8 @@
     <p class='texto-resumo'>Chave para abertura de conta</p>
 
     <div class='componente-pergunta'>
-        <div class="ui fluid disabled action input">
-            <input type="text" [(ngModel)]='chavePortabilidade' #chave>
+        <div class="ui fluid action input">
+            <input type="text" [readonly]="true" [(ngModel)]='chavePortabilidade' #chave>
 
             <button class="ui teal right icon button" (click)="copyInputMessage(chave)">
                 <i class="copy icon"></i>

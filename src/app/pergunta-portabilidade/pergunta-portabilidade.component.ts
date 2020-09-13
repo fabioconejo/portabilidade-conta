@@ -1,7 +1,6 @@
 import { ClienteService } from './../cliente.service';
-import { AppComponent } from './../app.component';
+
 import { Component, OnInit } from '@angular/core';
-import { PortabilidadeExportacaoService } from '../portabilidade-exportacao/portabilidade-exportacao.service';
 
 
 declare var $;

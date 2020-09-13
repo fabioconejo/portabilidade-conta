@@ -1,0 +1,106 @@
+<div class="perguntas-abertura" id="pergunta-abertura-1">
+    <p class='texto-pergunta-abertura'>O que é a portabilidade de conta?</p>
+
+    <div class='componente-pergunta-abertura'>
+        <p class='texto-pergunta-abertura-1'>
+            Nós do Banco Safra valorizamos a sua liberdade
+            de escolher qual instituição você quer estar e por isso
+            desenvolvemos a portabilidade de conta digital que tem como 
+            objetivo facilitar a criação de contas em bancos/fintechs.
+        </p>
+    </div>
+
+    <div class="navegacao-portabilidade">
+        <p class="anterior-portabilidade" style="visibility: hidden;"><button (click)="anterior()">Anterior</button></p>
+        <p class="proximo-portabilidade"><button (click)="proximo()">Próximo</button></p>
+    </div>
+</div>
+
+<div class="perguntas-abertura" id="pergunta-abertura-2">
+    <p class='texto-pergunta-abertura'>Informe sua chave de portabilidade</p>
+
+    <div class='componente-pergunta-abertura'>
+        <div class="ui fluid input">
+            <input type="text" placeholder="">
+        </div>
+    </div>
+
+    <div class="navegacao-portabilidade">
+        <p class="anterior-portabilidade"><button (click)="anterior()">Anterior</button></p>
+        <p class="proximo-portabilidade"><button (click)="exibirConfirmacao()">Próximo</button></p>
+    </div>
+
+    <div class="ui mini modal">
+        <div class="header">Checagem de Segurança</div>
+            <div class="content">
+                <p>Foi enviado um código de verificação no seu e-mail, degite-o abaixo para prosseguirmos.</p>
+                
+                <div class="ui fluid input">
+                    <input type="text" placeholder="">
+                </div>
+            </div>
+        <div class="actions">
+            <div class="ui approve button" (click)='proximo()'>Validar</div>
+        </div>
+    </div>
+</div>
+
+<div class="perguntas-abertura" id="pergunta-abertura-3">
+    <p class='texto-pergunta-abertura'>Parabéns, todos os documentos necessários foram submetidos</p>
+
+    <div class='componente-pergunta-abertura'>
+        <div class="ui form">
+            <div class="field">
+                <div class="ui read-only checkbox" id="demo1">
+                <input type="checkbox" checked="checked">
+                <label>RG</label>
+                </div>
+            </div>
+    
+            <div class="field">
+                <div class="ui read-only checkbox" id="demo2">
+                <input type="checkbox" checked="checked">
+                <label>CPF</label>
+                </div>
+            </div>
+            
+            <div class="field">
+                <div class="ui read-only checkbox" id="demo3">
+                <input type="checkbox" checked="checked">
+                <label>Comprovante de endereço</label>
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="ui read-only checkbox" id="demo3">
+                <input type="checkbox" checked="checked">
+                <label>Saldo a ser transferido</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="navegacao-portabilidade">
+        <p class="anterior-portabilidade" style="visibility: hidden;"><button (click)="anterior()">Anterior</button></p>
+        <p class="proximo-portabilidade"><button (click)="proximo()">Próximo</button></p>
+    </div>
+</div>
+
+<div class="perguntas-abertura" id="pergunta-abertura-4">
+    <p class='texto-pergunta-abertura'>Cadastre sua senha</p>
+
+    <div class='componente-pergunta-abertura'>
+        <div class="ui fluid input">
+            <input type="password" placeholder="Senha">
+        </div>
+        <br>
+        <div class="ui fluid input">
+            <input type="password" placeholder="Confirmar Senha">
+        </div>
+    </div>
+
+    <div class="navegacao-portabilidade">
+        <p class="anterior-portabilidade"><button (click)="anterior()">Anterior</button></p>
+        <a routerLink="/home/primeira-vez"><p class="proximo-portabilidade"><button (click)="concluir()">Concluir</button></p></a>
+    </div>
+</div>

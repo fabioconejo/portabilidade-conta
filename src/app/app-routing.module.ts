@@ -1,3 +1,7 @@
+import { PrimeiroLoginComponent } from './primeiro-login/primeiro-login.component';
+import { PerguntaAberturaComponent } from './pergunta-abertura/pergunta-abertura.component';
+import { PortabilidadeImportacaoComponent } from './portabilidade-importacao/portabilidade-importacao.component';
+import { EscolhaAberturaComponent } from './escolha-abertura/escolha-abertura.component';
 import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -40,7 +44,11 @@ const routes: Routes = [
         component: NavegacaoComponent,
         children:[{
           path: 'home',
-          component: HomeComponent
+          component: HomeComponent,
+          children: [{
+            path: 'primeira-vez',
+            component: PrimeiroLoginComponent
+          }]
         },
         {
           path: 'config',
@@ -49,7 +57,19 @@ const routes: Routes = [
       },
       {
         path: 'abertura-conta',
-        component: AberturaContaComponent
+        component: AberturaContaComponent,
+        children: [{
+          path: '',
+          component: EscolhaAberturaComponent
+        }, 
+        {
+          path:'portabilidade',
+          component: PortabilidadeImportacaoComponent,
+          children: [{
+            path:'perguntas',
+            component: PerguntaAberturaComponent
+          }]
+        }]
       }
     ]
   }

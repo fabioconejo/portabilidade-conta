@@ -13,6 +13,10 @@ import { HomeComponent } from './home/home.component';
 import { AberturaContaComponent } from './abertura-conta/abertura-conta.component';
 import { NavegacaoComponent } from './navegacao/navegacao.component';
 import { ConfuguracaoComponent } from './confuguracao/confuguracao.component';
+import { EscolhaAberturaComponent } from './escolha-abertura/escolha-abertura.component';
+import { PortabilidadeImportacaoComponent } from './portabilidade-importacao/portabilidade-importacao.component';
+import { PerguntaAberturaComponent } from './pergunta-abertura/pergunta-abertura.component';
+import { PrimeiroLoginComponent } from './primeiro-login/primeiro-login.component';
 
 
 @NgModule({
@@ -26,6 +30,10 @@ import { ConfuguracaoComponent } from './confuguracao/confuguracao.component';
     AberturaContaComponent,
     NavegacaoComponent,
     ConfuguracaoComponent,
+    EscolhaAberturaComponent,
+    PortabilidadeImportacaoComponent,
+    PerguntaAberturaComponent,
+    PrimeiroLoginComponent,
   ],
   imports: [
     BrowserModule,
