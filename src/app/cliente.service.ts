@@ -16,6 +16,8 @@ export class ClienteService {
   static motivoTag:string;
   static motivoDetalhado:string;
   static chavePortabilidade:string;
+
+  
   
   constructor() { 
 

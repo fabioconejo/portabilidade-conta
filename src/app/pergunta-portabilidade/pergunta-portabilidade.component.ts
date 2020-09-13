@@ -48,6 +48,7 @@ export class PerguntaPortabilidadeComponent implements OnInit {
 
   ngAfterViewInit() {
     $('#pergunta-1').transition('fade');
+    $('.ui.dropdown').dropdown();
   }
 
   anterior() {
@@ -81,7 +82,8 @@ export class PerguntaPortabilidadeComponent implements OnInit {
   }
 
   finalizar() {
-    console.log(this.nomeBanco);
+    this.nomeBanco = $('input[name ="banco"]').val();
+    this.motivoTag = $('input[name ="motivo"]').val();
 
     if(this.apenasDados) {
       ClienteService.valorTranferencia = 0.00

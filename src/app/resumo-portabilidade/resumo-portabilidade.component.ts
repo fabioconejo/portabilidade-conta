@@ -27,7 +27,7 @@ export class ResumoPortabilidadeComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+      
   }
 
   copyInputMessage(inputElement){
