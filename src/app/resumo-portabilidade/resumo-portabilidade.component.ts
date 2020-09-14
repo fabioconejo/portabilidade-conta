@@ -11,7 +11,7 @@ declare var $;
   styleUrls: ['./resumo-portabilidade.component.css']
 })
 export class ResumoPortabilidadeComponent implements OnInit {
-  token:string = "SGFja2FTYWZyYSAyMDIw";
+  token:string;
   nomeCliente:string;
   cpfCliente:string;
   valorTranferencia:number;

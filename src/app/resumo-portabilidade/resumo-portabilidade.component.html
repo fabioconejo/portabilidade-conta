@@ -9,12 +9,20 @@
                 <i class="copy icon"></i>
             </button>
         </div>
-        <p class='texto-resumo'>Resumo</p>
-        <ol class="ui list">
-            <li value="*">Nome do Cliente: {{nomeCliente}}</li>
-            <li value="*">CNPJ do Cliente: {{cpfCliente}}</li>
-            <li value="*">Instituição de Destino: {{nomeBanco}}</li>
-            <li value="*">Valor a Transferir: {{valorTranferencia}}</li>
-        </ol>
+
+        <div class="ui fluid card">
+            <div class="content">
+                <a class="header">Resumo</a>
+                
+                <div class="description">
+                    <ol class="ui list">
+                        <li value="*">Nome do Cliente: {{nomeCliente}}</li>
+                        <li value="*">CNPJ do Cliente: {{cpfCliente}}</li>
+                        <li value="*">Instituição de Destino: {{nomeBanco}}</li>
+                        <li value="*">Valor a Transferir: {{valorTranferencia}}</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

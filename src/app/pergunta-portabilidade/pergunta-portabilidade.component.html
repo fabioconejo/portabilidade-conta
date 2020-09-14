@@ -32,7 +32,7 @@
 
     <div class="navegacao-portabilidade">
         <p class="anterior-portabilidade"><button (click)="anterior()">Anterior</button></p>
-        <p class="proximo-portabilidade"><button (click)="proximo()">Próximo</button></p>
+        <p class="proximo-portabilidade"><button [disabled]="validarValor()" (click)="proximo()">Próximo</button></p>
     </div>
 </div>
 
@@ -52,7 +52,7 @@
 
     <div class="navegacao-portabilidade">
         <p class="anterior-portabilidade"><button (click)="anterior()">Anterior</button></p>
-        <p class="proximo-portabilidade"><button (click)="proximo()">Próximo</button></p>
+        <p class="proximo-portabilidade"><button [disabled]="validarBanco()" (click)="proximo()">Próximo</button></p>
     </div>
 </div>
 
@@ -77,14 +77,16 @@
 
     <div class="navegacao-portabilidade">
         <p class="anterior-portabilidade"><button (click)="anterior()">Anterior</button></p>
-        <p class="proximo-portabilidade"><button (click)="exibirConfirmacao()">Finalizar</button></p>
+        <p class="proximo-portabilidade"><button [disabled]="validarMotivo()" (click)="exibirConfirmacao()">Finalizar</button></p>
     </div>
 
-    <div class="ui mini modal">
+    <div class="ui mini modal termo-responsabilidade">
         <div class="header">Tem certeza que irá realizar a portabilidade?</div>
-            <div class="content">
-                <p>Ao clicar em ACEITO, você concorda em disponibilizar suas informações bancárias para o banco escolhido.</p>
-            </div>
+        
+        <div class="content">
+            <p>Ao clicar em ACEITO, você concorda em disponibilizar suas informações bancárias para o banco escolhido.</p>
+        </div>
+        
         <div class="actions">
             <div class="ui cancel button">Discordo</div>
             <a routerLink="/portabilidade/resumo"><div class="ui approve button" (click)='finalizar()'>Aceito</div></a>

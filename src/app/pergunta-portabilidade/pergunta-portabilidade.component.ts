@@ -13,8 +13,8 @@ declare var $;
 export class PerguntaPortabilidadeComponent implements OnInit {
   private _numPergunta:number = 1
 
-  valorTranferencia:number;
-  apenasDados:boolean = false;
+  valorTranferencia:string;
+  apenasDados:boolean;
   nomeBanco:string;
   motivoTag:string;
   motivoDetalhado:string;
@@ -38,7 +38,11 @@ export class PerguntaPortabilidadeComponent implements OnInit {
   ];
 
   constructor() { 
-
+    this.valorTranferencia = '';
+    this.apenasDados = false;
+    this.nomeBanco = '';
+    this.motivoTag = '';
+    this.motivoDetalhado = '';
   }
 
   ngOnInit(): void {
@@ -77,7 +81,19 @@ export class PerguntaPortabilidadeComponent implements OnInit {
   }
 
   exibirConfirmacao() {
-    $('.ui.mini.modal').modal('show');
+    $('.termo-responsabilidade').modal('show');
+  }
+
+  validarValor():boolean{
+    return (this.valorTranferencia == '') && (this.apenasDados == false);
+  }
+
+  validarBanco():boolean {
+    return $('input[name ="banco"]').val() == '';
+  }
+
+  validarMotivo():boolean {
+    return $('input[name ="motivo"]').val() == '';
   }
 
   finalizar() {
@@ -88,7 +104,7 @@ export class PerguntaPortabilidadeComponent implements OnInit {
       ClienteService.valorTranferencia = 0.00
     }
     else {
-      ClienteService.valorTranferencia = this.valorTranferencia
+      ClienteService.valorTranferencia = Number(this.valorTranferencia)
     }
     
     ClienteService.nomeBanco = this.nomeBanco;
